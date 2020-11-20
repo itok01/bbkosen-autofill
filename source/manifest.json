@@ -1,0 +1,65 @@
+{
+  "manifest_version": 2,
+  "name": "BbKosen Autofill",
+  "version": "1.0.0",
+  "icons": {
+    "16": "assets/icons/favicon-16.png",
+    "32": "assets/icons/favicon-32.png",
+    "48": "assets/icons/favicon-48.png",
+    "128": "assets/icons/favicon-128.png"
+  },
+  "description": "bb.kosen-ac.jp の所属機関を記憶するようにする拡張機能",
+  "homepage_url": "https://github.com/itok01/bbkosen-autofill",
+  "short_name": "BbKosen Autofill",
+  "permissions": [
+    "storage",
+    "https://bb.kosen-ac.jp/"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "__chrome|firefox__author": "itok01",
+  "__opera__developer": {
+    "name": "itok01"
+  },
+  "__firefox__applications": {
+    "gecko": {
+      "id": "{895D65B4-9F16-42F4-9B05-D6A61DC520FE}"
+    }
+  },
+  "__chrome__minimum_chrome_version": "49",
+  "__opera__minimum_opera_version": "36",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/favicon-16.png",
+      "32": "assets/icons/favicon-32.png",
+      "48": "assets/icons/favicon-48.png",
+      "128": "assets/icons/favicon-128.png"
+    },
+    "default_title": "tiny title",
+    "__chrome|opera__chrome_style": false,
+    "__firefox__browser_style": false
+  },
+  "__chrome|opera__options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true,
+    "__chrome__chrome_style": false
+  },
+  "background": {
+    "scripts": [
+      "js/background.bundle.js"
+    ],
+    "__chrome|opera__persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://bb.kosen-ac.jp/"
+      ],
+      "js": [
+        "js/contentScript.bundle.js"
+      ],
+      "all_frames": true
+    }
+  ]
+}
