@@ -1,6 +1,6 @@
 {
   "name": "bbkosen-autofill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "bb.kosen-ac.jp の所属機関を記憶するようにする拡張機能",
   "private": true,
   "repository": "https://github.com/itok01/bbkosen-autofill",
