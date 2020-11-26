@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "BbKosen Autofill",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icons": {
     "16": "assets/icons/favicon-16.png",
     "32": "assets/icons/favicon-32.png",
@@ -14,7 +14,9 @@
   "permissions": [
     "storage",
     "https://bb.kosen-ac.jp/",
-    "https://bb.kosen-ac.jp/webapps/login/"
+    "https://bb.kosen-ac.jp/?*",
+    "https://bb.kosen-ac.jp/webapps/login/",
+    "https://bb.kosen-ac.jp/webapps/login/?*"
   ],
   "content_security_policy": "script-src 'self'; object-src 'self'",
   "__chrome|firefox__author": "itok01",
@@ -56,7 +58,9 @@
     {
       "matches": [
         "https://bb.kosen-ac.jp/",
-        "https://bb.kosen-ac.jp/webapps/login/"
+        "https://bb.kosen-ac.jp/?*",
+        "https://bb.kosen-ac.jp/webapps/login/",
+        "https://bb.kosen-ac.jp/webapps/login/?*"
       ],
       "js": [
         "js/contentScript.bundle.js"
